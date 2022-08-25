@@ -36,14 +36,7 @@ $$
 Then, the expansion of the exponential function can be written as
 
 $$
-\begin{equation}
-\exp(x) =
-1
-+ \frac{x}{1}
-+ \left(\frac{x}{1} \times \frac{x}{2}\right)
-+ \left(\frac{x}{1} \times \frac{x}{2} \times \frac{x}{3}\right)
-+ \dots
-\end{equation}
+\exp(x) = 1 + \frac{x}{1} + \left(\frac{x}{1} \times \frac{x}{2}\right) + \left(\frac{x}{1} \times \frac{x}{2} \times \frac{x}{3}\right) + \dots
 $$
 
 With the repeated calculations pulled out, hopefully you can now see how we can
