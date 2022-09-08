@@ -9,9 +9,11 @@ $$
 $$
 
 Where the factorial is defined as the product expression.
+
 $$
 n! = \prod_{i=1}^{n} i = 1 \times 2 \times \dots \times (n-1) \times n
 $$
+
 You can see that, as $n$ increases, the time taken to compute each factorial
 takes $\mathcal{O}(n)$ operations[^1], and this is only for a single term of
 the Taylor Series! With $n$ terms in the Taylor Series, this takes us

@@ -11,9 +11,11 @@ solutions for the visualisation.
 
 Both Q1 and Q3 involve purely sine representations. If the coefficients $a_n$
 are known (from the `fft` module), then we can reconstruct the sample with
+
 $$
 y(x) = 2\sum_{n=1}^{N} a_{n-1} \sin\left(nx\right).
 $$
+
 Note that we index the coefficients with $n-1$, since the `fft` module does not
 return a "zeroth" coefficent.
 
@@ -40,9 +42,11 @@ A similar approach can be taken to Q2, except that we use `scipy.fft.dct` for
 the discrete cosine transform. The recreation is slightly different too, as we
 have to account for the "zeroth" coefficient being at a zero frequency, and is
 technically counted twice.
+
 $$
 y(x) = a_{0} + 2\sum_{n=1}^{N} a_{n} \cos\left(nx\right).
 $$
+
 In Python, this can be done as
 ```python
 from scipy import fft
