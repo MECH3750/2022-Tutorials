@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Import FFT library
-from scipy import fft
+import scipy.fft as fft
 
 
 def Q1():
@@ -14,7 +14,9 @@ def Q1():
     ax.plot(sample, exact)
 
     N = [5, 21]
-    amplitudes = fft.dst(exact, norm="forward", type=1)
+    amplitudes = np.asarray(fft.dst(exact, norm="forward", type=1))
+    #            ^^^^^^^^^^ This isn't strictly necessary, but it just
+    #                       makes the type checker happy
 
     domain = np.linspace(-2*np.pi, +2*np.pi, num=501)
     approx = np.zeros_like(domain)  # Make it the same size
@@ -36,7 +38,9 @@ def Q2():
     ax.plot(sample, exact)
 
     N = [5, 21]
-    amplitudes = fft.dct(exact, norm="forward")
+    amplitudes = np.asarray(fft.dct(exact, norm="forward"))
+    #            ^^^^^^^^^^ This isn't strictly necessary, but it just
+    #                       makes the type checker happy
 
     domain = np.linspace(-2*np.pi, +2*np.pi, num=501)
     approx = amplitudes[0] * np.ones_like(domain)  # Make it the same size
@@ -58,7 +62,9 @@ def Q3():
     ax.plot(sample, exact)
 
     N = [5, 21]
-    amplitudes = fft.dst(exact, norm="forward", type=1)
+    amplitudes = np.asarray(fft.dst(exact, norm="forward", type=1))
+    #            ^^^^^^^^^^ This isn't strictly necessary, but it just
+    #                       makes the type checker happy
 
     domain = np.linspace(-2*np.pi, +2*np.pi, num=501)
     approx = np.zeros_like(domain)  # Make it the same size
