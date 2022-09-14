@@ -2,9 +2,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Import FFT library
-from scipy import fftpack as fft
-
 
 def Q1():
     domain = np.linspace(-2*np.pi, +2*np.pi, num=501)
