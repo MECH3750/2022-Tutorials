@@ -91,7 +91,7 @@ def Q3():
 
 
 if __name__ == '__main__':
-    questions = [Q3]
+    questions = [Q1, Q2, Q3]
     for question in questions:
         input(f'Press `Enter` to run {question.__name__} ')
 
