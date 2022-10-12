@@ -39,13 +39,15 @@ $$
 Following this through to our finite difference approximations, we can see that
 
 $$
+\begin{gather}
 \frac{\partial u}{\partial x}
 \approx \frac{u_{i+1,j} - u_{i-1,j}}{\Delta x}
 = \frac{u_{s+1} - u_{s-1}}{\Delta x}
-\\[2ex]
+\\
 \frac{\partial u}{\partial y}
 \approx \frac{u_{i,j+1} - u_{i,j+1}}{\Delta y}
 = \frac{u_{s+w} - u_{s-w}}{\Delta y}
+\end{gather}
 $$
 
 ## Finite Difference
@@ -68,11 +70,11 @@ $$
 We can re-arrange the heat equation PDE to the following implicit scheme
 
 $$
-(1+4\sigma)T^{m+1}_{i,j}
-- \sigma \left(
-    T^{m+1}_{i-1,j}
-    + T^{m+1}_{i+1,j}
-    + T^{m+1}_{i,j-1}
-    + T^{m+1}_{i,j+1}
-\right) \approx T^m_{i,j}
+(1+4\sigma)T^{m+1}_{i,j} -
+\sigma \left(
+T^{m+1}_{i-1,j} +
+T^{m+1}_{i+1,j} +
+T^{m+1}_{i,j-1} +
+T^{m+1}_{i,j+1}
+\right) \approx T^m_{i,j} 
 $$
