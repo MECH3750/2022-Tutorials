@@ -70,11 +70,11 @@ $$
 We can re-arrange the heat equation PDE to the following implicit scheme
 
 $$
-(1+4\sigma)T^{m+1}_{i,j} -
+(1+4\sigma)T_{i,j}^{m+1} -
 \sigma \left(
-T^{m+1}_{i-1,j} +
-T^{m+1}_{i+1,j} +
-T^{m+1}_{i,j-1} +
-T^{m+1}_{i,j+1}
-\right) \approx T^m_{i,j} 
+T_{i-1,j}^{m+1} +
+T_{i+1,j}^{m+1} +
+T_{i,j-1}^{m+1} +
+T_{i,j+1}^{m+1}
+\right) \approx T_{i,j}^m
 $$
