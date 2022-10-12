@@ -26,14 +26,14 @@ Consider the (relatively standard) grid indexing below:
              width = 5
 ```
 
-Here, the grid index $s$ can be calculated from $s = i + j\times w$ where $w$
+Here, the grid index $s$ can be calculated from $s = i\times w + j$ where $w$
 is the width of the grid. We can see the horizontally neighbouring elements are
 separated by 1, and vertically neighbouring elements by $w$.
 
 $$
-\Delta_x s = \frac{\partial s}{\partial i}\Delta i \Rightarrow 1,
+\Delta_x s = \frac{\partial s}{\partial j}\Delta j \Rightarrow 1,
 \qquad
-\Delta_y s = \frac{\partial s}{\partial j}\Delta j \Rightarrow w
+\Delta_y s = \frac{\partial s}{\partial i}\Delta i \Rightarrow w
 $$
 
 Following this through to our finite difference approximations, we can see that
@@ -41,11 +41,11 @@ Following this through to our finite difference approximations, we can see that
 $$
 \begin{gather}
 \frac{\partial u}{\partial x}
-\approx \frac{u_{i+1,j} - u_{i-1,j}}{\Delta x}
+\approx \frac{u_{i,j+1} - u_{i,j-1}}{\Delta x}
 = \frac{u_{s+1} - u_{s-1}}{\Delta x}
 \\
 \frac{\partial u}{\partial y}
-\approx \frac{u_{i,j+1} - u_{i,j+1}}{\Delta y}
+\approx \frac{u_{i+1,j} - u_{i-1,j}}{\Delta y}
 = \frac{u_{s+w} - u_{s-w}}{\Delta y}
 \end{gather}
 $$
