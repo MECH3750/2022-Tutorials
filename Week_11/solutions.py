@@ -29,8 +29,8 @@ k   = 54    # [W/m.K]
 
 alpha = k / (c_p * rho)  # [m^2/s]
 
-dx = 2.5 * 0.01  # [m]
-dy = 2.5 * 0.01  # [m]
+dx = 0.05 * 0.01  # [m]
+dy = 0.05 * 0.01  # [m]
 dt = 100         # [s]
 
 # Calculate the CFL numbers
@@ -68,13 +68,13 @@ E = ind[:, -1]
 W = ind[:, +0]
 
 # Boundary condition
-current_temperature[S] = bottom_edge
 current_temperature[N] = top_edge
-current_temperature[W] = left_edge
+current_temperature[S] = bottom_edge
 current_temperature[E] = right_edge
+current_temperature[W] = left_edge
 
-D2_x = sigma_x * (np.eye(ns, k=-nx) - 2*np.eye(ns, k=0) + np.eye(ns, k=+nx))
-D2_y = sigma_y * (np.eye(ns, k=-1)  - 2*np.eye(ns, k=0) + np.eye(ns, k=+1))
+D2_x = sigma_x * (np.eye(ns, k=-1)  - 2*np.eye(ns, k=0) + np.eye(ns, k=+1))
+D2_y = sigma_y * (np.eye(ns, k=-nx) - 2*np.eye(ns, k=0) + np.eye(ns, k=+nx))
 
 implicit_matrix = np.eye(ns) - D2_x - D2_y
 
