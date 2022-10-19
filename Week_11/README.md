@@ -104,6 +104,11 @@ Our entire PDE then becomes
 
 $$
 \begin{gather*}
+T_{s}^{m+1} - T_{s}^m
+\approx
+\left[D_{x}^{(2)}\right]_{r,s} T_{r}^{m+1} +
+\left[D_{y}^{(2)}\right]_{r,s} T_{r}^{m+1}
+\\
 T_{s}^{m+1} -
 \left[D_{x}^{(2)}\right]_{r,s} T_{r}^{m+1} -
 \left[D_{y}^{(2)}\right]_{r,s} T_{r}^{m+1}
