@@ -45,7 +45,7 @@ T_{s+1}^{m+1}
 &=
 T_{r}^{m+1}\delta_{r,s-1} -
 2 T_{r}^{m+1}\delta_{r,s} +
-T_{r}^{m+1}\delta_{r,s}
+T_{r}^{m+1}\delta_{r,s+1}
 \\
 &=
 \left(
