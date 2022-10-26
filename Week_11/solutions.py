@@ -15,7 +15,7 @@ class IndexTool:
 
     def __getitem__(self, index):
         index  = (slice(None, None), *index)
-        coords = self._indices[index]
+        coords = list(self._indices[index])
         return np.ravel_multi_index(coords, self._shape)
 
 
